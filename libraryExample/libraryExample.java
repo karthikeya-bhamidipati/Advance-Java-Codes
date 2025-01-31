@@ -51,6 +51,13 @@ public class libraryExample {
             }
         }
 
+	public Book findBook(String title){
+		for (Book book : books) {
+			if (book.title == title)
+				return book;
+		}
+	}
+
         public void listAvaliableBooks() {
             for (Book book : books) {
                 if (book.isAvaliable)
