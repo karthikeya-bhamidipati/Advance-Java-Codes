@@ -56,6 +56,7 @@ public class libraryExample {
 			if (book.title == title)
 				return book;
 		}
+		return null;
 	}
 
         public void listAvaliableBooks() {
