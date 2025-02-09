@@ -53,6 +53,7 @@ class bankExample {
 
 	static class Bank {
 		ArrayList<BankAccount> accounts = new ArrayList<>();
+		
 	}
 
 	public static void main(String[] args) {
