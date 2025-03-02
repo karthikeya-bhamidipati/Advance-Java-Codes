@@ -21,7 +21,7 @@ public class ChatServer {
                 try {
                     String message;
                     while ((message = input1.readLine()) != null) {
-                        output2.println("Client 1: " + message);  // Forward message to Client 2
+                        output2.println("Client 1: " + message);
                     }
                 } catch (IOException e) {
                     System.out.println("Client 1 disconnected.");
@@ -32,7 +32,7 @@ public class ChatServer {
                 try {
                     String message;
                     while ((message = input2.readLine()) != null) {
-                        output1.println("Client 2: " + message);  // Forward message to Client 1
+                        output1.println("Client 2: " + message);
                     }
                 } catch (IOException e) {
                     System.out.println("Client 2 disconnected.");

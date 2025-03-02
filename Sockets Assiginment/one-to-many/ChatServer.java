@@ -34,12 +34,12 @@ public class ChatServer {
         public void run() {
             try {
                 in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                PrintWriter out = new PrintWriter(socket.getOutputStream(), true); // Sender's writer
+                PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
 
                 String message;
                 while ((message = in.readLine()) != null) {
                     System.out.println("Received: " + message);
-                    broadcastMessage(message, out); // Pass sender's writer
+                    broadcastMessage(message, out);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -48,7 +48,7 @@ public class ChatServer {
 
         private void broadcastMessage(String message, PrintWriter sender) {
             for (PrintWriter writer : clientWriters) {
-                if (writer != sender) { // Send to all clients except the sender
+                if (writer != sender) {
                     writer.println(message);
                 }
             }

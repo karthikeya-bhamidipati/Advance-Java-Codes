@@ -10,7 +10,6 @@ public class ChatClient {
 
             System.out.println("Connected to chat. Type messages...");
 
-            // Thread to listen for incoming messages from server
             new Thread(() -> {
                 try {
                     String message;
@@ -22,7 +21,6 @@ public class ChatClient {
                 }
             }).start();
 
-            // Sending user input to server
             String userMessage;
             while ((userMessage = userInput.readLine()) != null) {
                 out.println(userMessage);
